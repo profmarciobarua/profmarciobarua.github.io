@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .imagem-redimensionada {
+            width: 300px;
+            height: auto;
+        }
+
+        .destaque {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6600;
+        }
+    </style>
+
+    <title>O que é HTML</title>
+</head>
+
+<body>
+    <article>
+        <h1>O que é HTML</h1>
+        <p>O <abbr title="HyperText Markup Language">HTML</abbr> (HyperText Markup Language) é uma linguagem de marcação
+            utilizada para estruturar e formatar o conteúdo de uma página da web. Embora não seja uma linguagem de
+            programação no sentido tradicional, ela desempenha um papel crucial na criação de páginas web, permitindo
+            aos desenvolvedores definir a organização e a apresentação do conteúdo exibido nos navegadores.</p>
+        <!-- ... (trecho de código anterior) ... -->
+        <p>Em resumo, o HTML é a linguagem que os desenvolvedores usam para estruturar o conteúdo de uma página web. Ele
+            permite a formatação, organização e apresentação adequada do conteúdo, permitindo que os navegadores
+            interpretem e exibam as páginas conforme o projeto do desenvolvedor.</p>
+    </article>
+
+    <!-- Trecho adicionado para "Anatomia de um elemento HTML" -->
+    <section aria-labelledby="anatomia_de_um_elemento_html">
+        <h1 id="anatomia_de_um_elemento_html">
+            <a>
+                Anatomia de um elemento HTML
+            </a>
+        </h1>
+        <div>
+            <p>Vamos explorar nosso elemento parágrafo um pouco mais:</p>
+            <p>
+                <img src="grumpy-cat-small.png" alt="" width="821" height="255" loading="lazy">
+            </p>
+            <p>As partes principais do elemento são:</p>
+            <ol>
+                <li><strong>Tag de abertura:</strong> Consiste no nome do elemento ( neste caso: p ), envolvido entre
+                    <strong>parênteses angulares</strong> de abertura e fechamento. Isso indica onde o elemento começa,
+                    ou
+                    inicia a produzir efeito — neste caso, onde o parágrafo se inicia.
+                </li>
+                <li><strong>Tag de fechamento:</strong> É o mesmo que a tag de abertura, exceto que este inclui uma
+                    barra
+                    diagonal antes do nome do elemento. Indica onde o elemento termina — neste caso, onde fica o fim do
+                    parágrafo. Falhar em incluir o fechamento de uma tag é um erro comum para iniciantes e pode levar a
+                    resultados estranhos.</li>
+                <li><strong>O conteúdo:</strong> Este é o conteúdo do elemento, que neste caso é somente texto.</li>
+                <li><strong>O elemento:</strong> A tag de abertura, mais a tag de fechamento, mais o conteúdo, é igual
+                    ao
+                    elemento.</li>
+            </ol>
+        </div>
+    </section>
+
+    <article>
+        <!-- ... (código anterior) ... -->
+
+        <!-- Trecho adicionado para "Combinando elementos" -->
+        <section aria-labelledby="aninhando_elementos">
+            <h1 id="aninhando_elementos">
+                <a>
+                    Combinando elementos
+                </a>
+            </h1>
+            <div class="section-content">
+                <p>Elementos podem ser inseridos dentro de outros elementos — isto é chamado de
+                    <strong>aninhamento</strong>. Se nós quisermos dizer que nosso gato é <strong>muito</strong>
+                    mal-humorado, nós poderemos envolver a palavra "muito" com o elemento <code>&lt;strong&gt;</code>,
+                    que significa enfatizar fortemente a palavra:
+                </p>
+                <div class="code-example">
+                    <p class="example-header"><span class="language-name">html</span><button type="button"
+                            class="icon copy-icon"><span class="visually-hidden">Copy to Clipboard</span></button><span
+                            class="copy-icon-message visually-hidden" role="alert"></span></p>
+                    <pre class="brush: html notranslate" data-signature="B3YHO/5FkOuc1ntHcwNPRymNbQYGtM+xhBYTTQhHCwE="><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Meu gato é <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>muito<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> mal-humorado.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+                        </code></pre>
+                </div>
+                <p>No entanto, você precisa garantir que seus elementos estejam adequadamente aninhados: no exemplo
+                    acima nós abrimos o elemento <code>p</code> primeiro, e então o elemento <code>strong</code>,
+                    portanto temos que fechar o elemento <code>strong</code> primeiro, depois o <code>p</code>. O código
+                    a seguir está errado:</p>
+                <div class="code-example">
+                    <p class="example-header"><span class="language-name">html</span><button type="button"
+                            class="icon copy-icon"><span class="visually-hidden">Copy to Clipboard</span></button><span
+                            class="copy-icon-message visually-hidden" role="alert"></span></p>
+                    <pre class="brush: html example-bad notranslate"
+                        data-signature="wYzvVrG62CZ2S+SH04CIMsCC0ZBfVlUX0qJRqtfTCuc="><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Meu gato é <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>muito mal-humorado.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+                    </code></pre>
+                </div>
+                <p>Os elementos devem abrir e fechar corretamente para que eles fiquem claramente dentro ou fora do
+                    outro. Caso eles se sobreponham, como no exemplo acima, então o seu navegador tentará adivinhar o
+                    que você quis dizer, e talvez você obtenha resultados inesperados. Então não faça isso!</p>
+            </div>
+        </section>
+
+        <!-- ... (código posterior) ... -->
+
+        <!-- Exemplo da tag <strong> -->
+        <section>
+            <h3>Exemplo de Uso da Tag &lt;strong&gt;</h3>
+            <p>Veja um exemplo de como a tag <strong>&lt;strong&gt;</strong> é usada:</p>
+            <p>Meu gato é <strong>muito</strong> mal-humorado.</p>
+        </section>
+
+        <section>
+            <h3>Exemplo de Uso da Tag Errado &lt;strong&gt;</h3>
+            <p>Veja um exemplo errado como a tag <strong>&lt;strong&gt;</strong> é usada:</p>
+            <p>Meu gato é <strong>muito mal-humorado.</p></strong>
+        </section>
+    </article>
+    <section aria-labelledby="elementos_vazios">
+        <h1 id="elementos_vazios">
+            <a>
+                Elementos vazios
+            </a>
+        </h1>
+        <div class="section-content">
+            <p>Nem todos os elementos seguem o padrão acima de: tag de abertura, conteúdo, tag de fechamento. Alguns
+                elementos
+                consistem apenas em uma única tag, que é geralmente usada para inserir/incorporar algo no documento no
+                lugar em
+                que ele é incluído. Por exemplo, o elemento <code>&lt;img&gt;</code> insere uma imagem em uma página na
+                posição em
+                que ele é incluído:</p>
+            <div class="code-example">
+                <pre class="brush: html notranslate" data-signature="cBEYy0DChKFY9Ff0ZKwGdpoWJ8Prp8QwLl+Br9HzB20="><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token string">"URL_DA_SUA_IMAGEM_AQUI"</span></span> <span class="token punctuation">/</span><span class="token punctuation">></span>
+                    </code></pre>
+            </div>
+            <p>Isto exibirá em sua página:</p>
+            <img src="pexels-asad-photo-maldives-3293150.jpg" class="imagem-redimensionada" alt="Imagem de exemplo" />
+        </div>
+    </section>
+
+    <section aria-labelledby="elementos_vazios">
+        <h1 id="elementos_vazios">
+            <a>
+                Atributos
+            </a>
+        </h1>
+        <div class="section-content">
+            <p>Elementos também podem conter atributos, que se apresentam da seguinte forma:</p>
+
+            <img src="grumpy-cat-attribute-small.png" alt="My cat is very grumpy" width="1287" height="156"
+                loading="lazy"> />
+        </div>
+
+        <p>Atributos contém informação extra sobre o elemento, mas que você não deseja que apareça no conteúdo. </p>
+        <p>Nestecaso, o atributo class permite que você dê ao elemento um nome de identificação, que pode ser usada mais
+        </p>
+        <p> tarde para direcionar informação de estilo ao elemento e outras coisas. </p>
+
+        <p> Um atributo deve conter: </p>
+
+        <p>Um atributo deve conter:</p>
+        <ol>
+            <li>Um espaço entre ele e o nome do elemento (ou o atributo anterior, caso o elemento já contenha um ou mais
+                atributos.)</li>
+            <li>O nome do atributo, seguido por um sinal de igual.</li>
+            <li>Um valor de atributo, com aspas de abertura e fechamento em volta dele.</li>
+        </ol>
+
+        <p class="destaque">Profissional de Alta Performance</p>
+
+        <img src="imgcss.png" alt="Exemplo CSS" width="500" height="200" loading="lazy"> />
+
+    </section>
+
+    </section>
+    <div class="container">
+        <h1>Conheça os 5 Destinos Paradisíacos no Nosso País!</h1>
+        <p>Apresentamos os pacotes turísticos perfeitos para quem busca experiências inesquecíveis em cenários
+            paradisíacos dentro do nosso país. Nossas landing pages são projetadas para ajudá-lo a escolher o destino
+            dos seus sonhos e realizar uma viagem incrível.</p>
+        <p>Cada uma das nossas landing pages exclusivas destaca um destino diferente:</p>
+        <ol>
+            <li>Desfrute das praias de areia branca e águas cristalinas em [Nome do Destino 1].</li>
+            <li>Explore a exuberante natureza e cachoeiras em [Nome do Destino 2].</li>
+            <li>Mergulhe na cultura e gastronomia local em [Nome do Destino 3].</li>
+            <li>Aventure-se em trilhas e paisagens montanhosas em [Nome do Destino 4].</li>
+            <li>Relaxe em resorts de luxo e praias isoladas em [Nome do Destino 5].</li>
+        </ol>
+        <p>Nossas landing pages fornecem detalhes sobre cada destino, fotos deslumbrantes e opções de pacotes turísticos
+            personalizados. Ao escolher um dos nossos pacotes, você estará prestes a vivenciar momentos inesquecíveis em
+            um verdadeiro paraíso.</p>
+        <p>Reserve seu pacote agora e embarque em uma jornada emocionante para os destinos mais incríveis do nosso país!
+        </p>
+    </div>
+
+    </div>
+    </section>
+
+
+</body>
+
+</html>

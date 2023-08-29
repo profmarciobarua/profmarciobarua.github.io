@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 1 - JavaScript, Node.js e React.js</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 800px;
+      line-height: 1.6;
+      color: #333;
+      text-align: justify;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+
+    ol {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Linguagem JavaScript</h1>
+    <p>È uma linguagem de programação para desenvolvimento web que traz interatividade às páginas, sendo executada no
+      navegador e também no servidor. </p>
+  </header>
+
+
+  <section>
+    <h2>Característica: Tipagem mutável </h2>
+    <p>Significa poder alterar o tipo da variável ao longo do código.</p>
+    <img src="tipomutavel.png" alt="Case Sensitive">
+  </section>
+
+
+  <section>
+    <h2>Característica: Case Sensitive</h2>
+    <p>Significa que letras maiúsculas e minúsculas são consideradas diferentes em uma linguagem de programação.</p>
+    <img src="sensitive.png" alt="Case Sensitive">
+  </section>
+
+  <section>
+    <h1>Node.js</h1>
+    <p>Node.js é um interpretador de código JavaScript que permite executar JavaScript no servidor.</p>
+
+    <h2>Instalando o Node.js</h2>
+    <p>Para começar a usar o Node.js, siga os passos abaixo:</p>
+    <ol>
+      <li>Visite o site oficial do Node.js: <a href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a>
+      </li>
+      <li>Clique no botão de download para a versão adequada ao seu sistema operacional.</li>
+      <li>Faça o download e execute o instalador, seguindo as instruções na tela.</li>
+      <li>Após a instalação, você poderá criar e executar aplicativos com Node.js.</li>
+    </ol>
+    <p>Agora você está pronto para começar a desenvolver usando o Node.js!</p>
+
+    <h3>Exemplo de console.log</h3>
+    <h4>Criar um arquivo aula1.js no VS Codeno ou <a href="https://playcode.io/">Ir para PlayCode</a></h4>
+
+    <p> Digitar o código console.log("Aula 1 - Dispositivos Móveis")</p>
+    <p> Depois Executar o Codigo <strong> node aula1.js </strong> </p>
+
+    <p>Crie um novo arquivo no Visual Studio Code clicando em <span class="lf-badge">File</span> > <span
+        class="lf-badge">New file</span> e salve-o na área de trabalho com o nome “<span
+        class="lf-badge">hello_world_funcao.js</span>”.</p>
+
+    <p>Vamos ao código.</p>
+
+    <h3>Criando uma variável</h3>
+
+    <p>O primeiro passo é criar uma variável com o valor “<span class="lf-badge">Hello World</span>”.</p>
+
+    <p>No JavaScript, para criar uma variável usamos a palavra <span class="lf-badge"><b>var</b></span>, seguida do
+      <span class="lf-badge">nome</span> da variável, depois um sinal de igual <span class="lf-badge">=</span>, para
+      indicar que vamos atribuir um valor para ela, e o <span class="lf-badge">valor</span>. Observe a <b>Figura 1</b>.
+    </p>
+
+    <div class="lf-secao">
+      <figure>
+        <img alt="Criação de uma variável"
+          src="//www.devmedia.com.br/arquivos/Salas/Linguagem/JavaScript/52/2332/40521/image1.png">
+        <figcaption><b>Figura 1</b>. Criação de uma variável</figcaption>
+      </figure>
+    </div>
+
+
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+var texto = "Hello World";
+</code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+
+
+    <h3>Criando uma função</h3>
+
+    <p>Em seguida, vamos criar uma função que imprime um texto. Utilizar funções evita repetições de código e o deixa
+      mais organizado.</p>
+
+    <p>Para criar uma função utilizamos a palavra <span class="lf-badge">function</span>, seguida do <span
+        class="lf-badge">nome</span> da função, parênteses <span class="lf-badge">( )</span> e chaves <span
+        class="lf-badge">{ }</span>. Veja como vai ficar:</p>
+
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    function imprimirTexto() { }
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+    <p>Precisamos enviar o texto que queremos imprimir para a função e, para isso, vamos passar um <span
+        class="lf-badge">parâmetro</span> para ela, que deve ser colocado entre os parênteses <span class="lf-badge">(
+        )</span>.</p>
+
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    function imprimirTexto(textoParaImprimir) {}
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+    <p>Agora precisamos criar o código que vai ser executado quando chamarmos esta função. Vamos colocar o mesmo código
+      da aula anterior dentro das <span class="lf-badge">{ }</span>:</p>
+
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    console.log(“Hello World”);
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+    <p>Mas no lugar do texto, vamos colocar o parâmetro que a função vai receber. Vai ficar assim:</p>
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    function imprimirTexto(textoParaImprimir) {
+       console.log(textoParaImprimir);
+    }
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+
+    <p>Veja no slide abaixo a explicação detalhada do código:
+
+    <div class="theme-default">
+      <div id="slide-comp" class="nivoSlider">
+        <img src="funcao1.png" alt="Slide 1" title="Slide 1 " />
+        <img src="funcao2.png" alt="Slide 2" title="Slide 2" />
+        <img src="funcao3.png" alt="Slide 3" title="Slide 3" />
+        <img src="funcao4.png" alt="Slide 4" title="Slide 4" />
+        <img src="funcao5.png" alt="Slide 5" title="Slide 5" />
+      </div>
+
+    </div>
+
+
+    <h3>Chamando a função</h3>
+
+    <p>Nossa função está pronta, agora só precisamos chamá-la no nosso código. Para isso, precisamos apenas digitar o
+      <span class="lf-badge">nome</span> dela, seguido do <span class="lf-badge">parâmetro</span> que vamos passar para
+      ela dentro dos parênteses. Vai ficar assim:
+    </p>
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    imprimirTexto(texto);
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+    <p>Nesse caso, estamos passando para a função <span class="lf-badge">imprimirTexto</span> a variável texto, que
+      possui o valor “<span class="lf-badge">Hello World</span>”.</p>
+
+
+    <div class="quote-container">
+      <label>
+        Utilizar funções evita repetições de código e o deixa mais organizado.
+      </label>
+    </div>
+
+    <p>Tudo pronto. Agora é só executar o comando <span class="lf-badge">node hello_world_funcao.js</span> no terminal,
+      como fizemos na aula anterior.</p>
+
+    <p>Segue o código completo:</p>
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    var texto = "Hello World";
+    
+    function imprimirTexto(textoParaImprimir) {
+       console.log(textoParaImprimir);
+    }
+    
+    imprimirTexto(texto);
+    
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+  </section>
+  <h1>O que é Document Object Model (DOM)?</h1>
+  <p>O Document Object Model (DOM) é uma interface de programação e uma representação estruturada de documentos em
+    formato HTML, XML ou outros formatos similares. Ele permite que programas de linguagens de programação, como
+    JavaScript, interajam com a estrutura, conteúdo e estilo de um documento da web. Basicamente, o DOM modela um
+    documento como uma árvore de objetos, onde cada parte do documento, como elementos HTML, atributos e texto, é
+    representada por um objeto no DOM.</p>
+  <p>O DOM permite que os desenvolvedores web acessem, manipulem e modifiquem elementos de uma página da web de forma
+    dinâmica, sem a necessidade de recarregar a página inteira. Isso é essencial para criar páginas da web interativas e
+    dinâmicas, onde os elementos podem ser adicionados, removidos, alterados e animados em resposta a ações do usuário
+    ou eventos.</p>
+  <p>Principais características do DOM:</p>
+  <ol>
+    <li><strong>Estrutura em Árvore:</strong> O DOM representa um documento como uma estrutura em forma de árvore, com o
+      nó raiz representando o documento inteiro e os nós subsequentes representando elementos, atributos e conteúdo de
+      texto.</li>
+    <li><strong>Acesso e Manipulação:</strong> O DOM oferece métodos e propriedades que permitem aos desenvolvedores
+      acessar e manipular elementos, atributos e conteúdo dentro de um documento.</li>
+    <li><strong>Eventos:</strong> O DOM também lida com eventos, permitindo que scripts respondam a interações do
+      usuário, como cliques de mouse, pressionamentos de tecla e outros eventos.</li>
+    <li><strong>Interação Dinâmica:</strong> Por meio do DOM, os desenvolvedores podem criar páginas da web que
+      respondem dinamicamente às ações do usuário, atualizando apenas partes específicas da página conforme necessário.
+    </li>
+    <li><strong>Acessibilidade:</strong> O DOM também é usado para fornecer suporte a tecnologias assistivas, permitindo
+      que leitores de tela e outros dispositivos interpretem e apresentem o conteúdo de uma página de forma acessível
+      para pessoas com deficiências visuais ou outras necessidades.</li>
+  </ol>
+  <p>O DOM não se limita apenas a documentos HTML; ele também é usado para representar e interagir com documentos XML,
+    SVG (Scalable Vector Graphics) e outros formatos. Em essência, o DOM é uma peça fundamental na criação de
+    experiências interativas e dinâmicas na web, permitindo que os desenvolvedores controlem a estrutura e o
+    comportamento de uma página por meio de scripts e linguagens de programação.</p>
+  <p>Aprenda mais sobre o Document Object Model (DOM) clicando <a
+      href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"
+      target="_blank">aqui</a>.</p>
+
+      <div class="theme-default">
+        <div id="slide-comp" class="nivoSlider">
+          <img src="EXEMPLODOM.jpg" alt="Slide 1" title="Slide 1 " />
+        
+        </div>
+  
+      </div>
+
+  <h1>Principais Objetos do Document Object Model (DOM)</h1>
+  <p>O Document Object Model (DOM) é composto por uma variedade de objetos que representam diferentes partes de um
+    documento HTML ou XML. Cada objeto tem suas propriedades e métodos que permitem acessar e manipular elementos e
+    conteúdo. Aqui estão alguns dos principais objetos do DOM:</p>
+  <ol>
+    <li><strong><code>document:</code></strong> O objeto <code>document</code> representa o documento inteiro e é a
+      entrada principal para interagir com o DOM. Ele fornece métodos para selecionar elementos, criar novos elementos,
+      modificar conteúdo e muito mais.</li>
+    <li><strong><code>Element:</code></strong> O objeto <code>Element</code> representa um elemento HTML ou XML. Cada
+      tag (como &lt;div&gt;, &lt;p&gt;, etc.) é representada por um objeto <code>Element</code>. Os elementos têm
+      propriedades para acessar atributos e conteúdo, e métodos para manipular esses elementos.</li>
+      <li><strong><code>Text:</code></strong> O objeto <code>Text</code> representa o conteúdo textual dentro de um
+      elemento. Por exemplo, o texto entre as tags &lt;p&gt; é representado por um objeto <code>Text</code>.</li>
+    <li><strong><code>Attribute:</code></strong> O objeto <code>Attribute</code> representa um atributo dentro de um
+      elemento. Cada atributo (como <code>class</code>, <code>id</code>, etc.) é representado por um objeto
+      <code>Attribute</code>.</li>
+    <li><strong><code>Event:</code></strong> O objeto <code>Event</code> representa um evento que ocorre em um elemento.
+      Ele contém informações sobre o evento, como o tipo de evento, o alvo e os dados associados.</li>
+    <li><strong><code>HTMLElement:</code></strong> O objeto <code>HTMLElement</code> é uma subclasse de
+     <li><strong><code>Window:</code></strong> O objeto <code>Window</code> representa a janela do navegador ou o
+      contexto global no qual a página está sendo exibida. Ele fornece métodos para manipular a janela, controlar
+      pop-ups e lidar com eventos.</li>
+    
+  </ol>
+  <p>Esses são apenas alguns dos principais objetos do DOM. Cada objeto tem seu próprio papel no modelo, permitindo que
+    os desenvolvedores acessem, manipulem e interajam com diferentes aspectos dos documentos da web.</p>
+    <h1>Como Usar o document.addEventListener</h1>
+    <p>O <code>document.addEventListener</code> é como um instrutor invisível em JavaScript. Ele permite que você diga ao navegador para prestar atenção a ações, como cliques de mouse, que acontecem em qualquer parte da página.</p>
+    <p>Imagine que é como dar uma ordem: "Hey navegador, quando alguém clicar em algo na página, me avise!"</p>
+    <h1>Evento DOMContentLoaded</h1>
+    <p>O evento DOMContentLoaded é acionado quando a estrutura do DOM foi totalmente construída e os elementos HTML da página estão prontos para serem manipulados através do JavaScript. Isso assegura que seu código JavaScript interaja com os elementos da página somente quando eles estiverem disponíveis.</p>
+    <h1>Usando o evento DOMContentLoaded</h1>
+    <p>O evento <code>DOMContentLoaded</code> é adicionado ao documento usando <code>document.addEventListener</code>. Quando o evento é disparado (quando o DOM estiver completamente carregado), a função dentro dele é acionada. Dentro da função, você pode realizar ações que envolvem elementos da página, porque agora o DOM está pronto e acessível.</p>
+    <h1>Exercicios</h1>
+    <p>Contagem de Vogais: Crie uma função que conte e retorne o número de vogais em uma string.</p>
+
+
+    <div class="theme-default">
+      <div id="slide-comp" class="nivoSlider">
+        <img src="exemplocodigojs.png" alt="Slide 1" title="Slide 1 " />
+        <img src="exemplohtml.jpg" alt="Slide 1" title="Slide 1 " />
+      
+      
+      
+      </div>
+
+    </div>
+
+
+   <br>
+   <br>
+    <section>
+      <a href="reqsuisitos.html" target="_blank">Primeira Avaliação Entrega 24/08/2023
+      </a>
+  
+
+
+
+
+    </section>
+
+  </section> 
+  <!-- <section>
+
+
+    <section>
+      <h1>React JS</h1>
+      <p>È uma biblioteca JavaScript de código aberto para construção de interfaces de usuário interativas e
+        reutilizáveis.</p>
+
+
+      <h3>Principais características</h3>
+
+      <p>As principais características do React JS são:</p>
+
+      <ol>
+        <li>Utiliza como base as linguagens HTML, CSS
+          e JavaScript</li>
+        <li>Utiliza o conceito de componentes para
+          criar as páginas</li>
+        <li>Cria Single Page Applications (SPAs)</li>
+      </ol>
+
+      <p>A seguir vemos que o React JS utiliza como base as
+        linguagens HTML, CSS e JavaScript para criar as páginas:</p>
+
+
+      <div class="theme-default">
+        <div id="slide-comp" class="nivoSlider">
+          <img src="react1.png" />
+          <img src="react2.png" />
+          <img src="react3.png" />
+          <img src="react4.png" />
+          <img src="react5.png" />
+          <img src="react5.png" />
+          <img src="react6.png" />
+          <img src="react7.png" />
+
+        </div>
+      </div>
+
+    </section>
+    <section>
+      <h3>Criando aplicação React JS</h3>
+
+      <p> Comando usado para criar app JS: <strong> npx create-react-app minha-pagina </strong> </p>
+
+      <h3>Download de Arquivo Zipado</h3>
+      <p>Clique no link abaixo para baixar o arquivo zipado:</p>
+
+      <a href="minha-pagina.rar" download>Download do Arquivo Zipado</a>
+
+      <img src="primeira.png" />
+
+      <p> Comando para startar o Projeto <strong> npm start </strong> </p>
+
+
+    </section>
+    <section>
+      <h3>Hello World</h3>
+
+      <p> Alterar o arquivo App.js dentro da pasta <strong> src <strong></strong> para criar o Hello World: </strong>
+      </p>
+
+      <img src="codigo1.png" />
+
+
+      <h3>Entendo a Sintaxe</h3>
+
+      <img src="codigohello.png" />
+
+      <img src="codigohello1.png" />
+
+      <img src="codigohello2.png" />
+
+      <img src="codigohello3.png" />
+    </section>
+
+    <section>
+      <h3>Exercício Construindo Essa Pagina</h3>
+
+
+      <img src="exercicio.png" />
+
+      <img src="dicas.png" />
+
+      <p>Veja no <b>Código 2</b> o conteúdo do arquivo <span class="lf-badge">App.css</span>.</p>
+
+      <div class="code-area">
+        <div class="pre_css">
+          <div>
+            <pre style='white-space:pre;' class='line-numbers'><code>
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100vh;
+    }
+    
+    /* TOPO */
+    header {
+      background-color: #20232a;
+      color: #61dafb;
+      padding: 0 15px;
+    }
+    
+    header p {
+      font-weight: bold;
+    }
+    
+    /* CONTEÚDO */
+    main {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    /* SEÇÃO TÍTULO */
+    .box-titulo {
+      background-color: #282c34;
+      padding-bottom: 50px;
+    }
+    
+    h1 {
+      color: #61dafb;
+    }
+    
+    .box-titulo p{
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 50px;
+    }
+    
+    .box-titulo a{
+      text-decoration: none;
+      background-color: #61dafb;
+      color: #000;
+      padding: 10px 20px;
+    }
+    
+    /* SEÇÃO REQUISITOS */
+    .box-requisitos {
+      padding: 30px 10px;
+    }
+    
+    .box-cards {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 80px;
+    }
+    
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #282c34;
+      width: calc((100% / 3) - 10px);
+      max-width: 300px;
+      margin: 5px;
+      padding: 20px 15px;
+      border-radius: 5px;
+      box-shadow: 5px 5px rgb(145, 145, 145);
+    }
+    
+    .card h3{
+      margin: 0 0 10px;
+      color: #edc854;
+    } 
+    
+    .card p {
+      margin: 0;
+      color: #fff;
+    }
+    
+    /* SEÇÃO RODAPÉ */
+    footer {
+      background-color: #f2f3f6;
+      text-align: center;
+    }</code></pre>
+          </div>
+        </div>
+        <div class="code-caption"><b>Código 2</b>. Conteúdo do arquivo App.css</div>
+      </div>
+
+
+
+    </section> -->
+
+
+</body>
+
+</html>
