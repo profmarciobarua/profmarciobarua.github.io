@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3 - Sintaxe e Conceito Componente do React Native</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        ol {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>React Native</h1>
+    </header>
+
+    <h1>Sintaxe React Native?</h1>
+    <p>A sintaxe React Native é uma extensão do React que permite criar interfaces nativas para aplicativos móveis
+        usando componentes que se assemelham ao React, como <code>&lt;Text&gt;Hello World&lt;/Text&gt;</code>.</p>
+
+    <section>
+        <p>Para acompanhar as etapas de construção do aplicativo, vamos
+            abrir o arquivo App.js e apagar todo o código, ou seja, apagar o código que o
+            Expo criou. Feito isso, vamos inserir o <b>Código 1</b> no arquivo <span class="lf-badge">App.js</span>.</p>
+
+        <div class="code-area">
+            <div class="pre_jsx">
+                <div>
+                    <pre style='white-space:pre;' class='line-numbers'><code>
+              import React from 'react';
+              import { Text } from 'react-native';
+               
+              export default function App() {
+                return (
+                    &lt;Text&gt;Hello World&lt;/Text&gt;
+                );
+              }</code></pre>
+                </div>
+            </div>
+            <div class="code-caption"><b>Código 1</b>. Código do aplicativo referente ao que será exibido
+                na tela</div>
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <img src="s1.png">
+        <img src="s2.png">
+        <img src="s3.png">
+        <img src="s4.png">
+        <img src="s5.png">
+        <img src="s6.png">
+        <img src="s7.png">
+
+
+
+    </section>
+
+
+
+    <section>
+
+
+        <p>Agora que já finalizamos a etapa de exibir o conteúdo na
+            tela, podemos estilizá-lo. O <b>Código 2</b> possui o novo código do arquivo <span
+                class="lf-badge">App.js</span> referente a esta etapa.</p>
+
+        <div class="code-area">
+            <div class="pre_jsx">
+                <div>
+                    <pre style='white-space:pre;' class='line-numbers'><code>
+      import React from 'react';
+      import { StyleSheet, Text } from 'react-native';
+       
+      export default function App() {
+        return (
+            &lt;Text style={ estilos.texto }&gt;Hello World&lt;/Text&gt;
+        );
+      }
+       
+      const estilos = StyleSheet.create({
+        texto: {
+          marginTop: 20,
+          fontSize: 36,
+        }
+      });</code></pre>
+                </div>
+            </div>
+            <div class="code-caption"><b>Código 2</b>. Código referente à etapa de estilização</div>
+        </div>
+
+        <p>Veja na Imagem abaixo como essa etapa foi criada:</p>
+    </section>
+
+
+
+    <section>
+
+        <img src="ss1.png">
+        <img src="ss2.png">
+        <img src="ss3.png">
+        <img src="ss4.png">
+        <img src="ss5.png">
+        <img src="ss6.png">
+        <img src="ss7.png">
+        <img src="ss8.png">
+        <img src="ss9.png">
+        <img src="ss10.png">
+        <img src="ss11.png">
+        <img src="ss12.png">
+        <img src="ss13.png">
+        <img src="ss14.png">
+        <img src="ss15.png">
+        <img src="ss16.png">
+        <img src="ss17.png">
+        <img src="ss18.png">
+        <img src="ss19.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+    <!-- Explicação do componente &lt;View&gt; no React Native -->
+    <h1>Componente &lt;View&gt;: Criando Estruturas de Layout</h1>
+
+    <p>A tag &lt;View&gt; é um componente fundamental no React Native, usado para criar uma "visualização" na interface
+        do usuário. Neste contexto, o componente &lt;View&gt; age como um container que agrupa e organiza outros
+        componentes, semelhante ao uso das tags HTML para estruturar o conteúdo de uma página.</p>
+
+    <h2>Propriedades de Estilo aplicadas à &lt;View&gt;:</h2>
+    <ul>
+        <li><strong>backgroundColor:</strong> Define a cor de fundo da &lt;View&gt; da mesma forma que o atributo
+            "style" define o background-color em uma tag HTML.</li>
+        <li><strong>flex:</strong> Configura a flexibilidade da &lt;View&gt;, permitindo que ela ocupe todo o espaço
+            vertical disponível, similar à propriedade "flex" em estilos CSS de tags HTML.</li>
+        <li><strong>justifyContent:</strong> Centraliza os componentes verticalmente dentro da &lt;View&gt;, assim como
+            a propriedade "justify-content" em CSS flexbox de tags HTML.</li>
+        <li><strong>alignItems:</strong> Centraliza os componentes horizontalmente dentro da &lt;View&gt;, semelhante à
+            propriedade "align-items" em CSS flexbox de tags HTML.</li>
+    </ul>
+
+    <p>Essa &lt;View&gt; atua como um recipiente que define a estrutura de layout para os componentes filhos, assim como
+        as tags HTML atuam como containers para organizar elementos dentro de um documento web. Quando combinada com os
+        estilos definidos, a &lt;View&gt; cria uma estrutura organizada e centralizada na tela do aplicativo, similar à
+        organização de elementos em páginas HTML.</p>
+
+    <p>Espero que esses detalhes extras sobre o componente &lt;View&gt; e sua função no código sejam úteis para a sua
+        compreensão.</p>
+
+
+    <section>
+
+        <img src="exemploview.png">
+
+
+
+    </section>
+    <section>
+
+        <p>Para exibir uma imagem em React Native, você pode usar a tag <code>&lt;Image&gt;</code>:</p>
+        <ReactNativeComponent>
+            <Image source={require('caminho/para/sua/imagem.jpg')} />
+        </ReactNativeComponent>
+    </section>
+
+    <section>
+
+        <img src="exemploimg.png">
+
+        <style>
+            .img {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                width: 150px;
+                height: 150px;
+            }
+        </style>
+
+        <p><strong>marginTop:</strong></p>
+        <p><em>Definição:</em> A propriedade <code>marginTop</code> controla o espaçamento (margem superior) entre o
+            elemento e seus elementos vizinhos acima dele.</p>
+        <p><em>Valor:</em> 20</p>
+        <p><em>Efeito:</em> Adiciona um espaçamento de 20 unidades entre a parte superior da imagem e o elemento
+            anterior.</p>
+
+        <p><strong>marginBottom:</strong></p>
+        <p><em>Definição:</em> A propriedade <code>marginBottom</code> controla o espaçamento (margem inferior) entre o
+            elemento e seus elementos vizinhos abaixo dele.</p>
+        <p><em>Valor:</em> 10</p>
+        <p><em>Efeito:</em> Adiciona um espaçamento de 10 unidades entre a parte inferior da imagem e o elemento
+            seguinte.</p>
+
+        <p><strong>width:</strong></p>
+        <p><em>Definição:</em> A propriedade <code>width</code> define a largura da imagem.</p>
+        <p><em>Valor:</em> 150</p>
+        <p><em>Efeito:</em> Define a largura da imagem como 150 unidades.</p>
+
+        <p><strong>height:</strong></p>
+        <p><em>Definição:</em> A propriedade <code>height</code> define a altura da imagem.</p>
+        <p><em>Valor:</em> 150</p>
+        <p><em>Efeito:</em> Define a altura da imagem como 150 unidades.</p>
+
+        <p>Essas propriedades de estilo estão sendo usadas para personalizar a aparência da imagem exibida no
+            aplicativo. Através do ajuste das margens e do tamanho, você pode controlar como a imagem é posicionada e
+            redimensionada dentro da tela. Lembre-se de que esses valores são apenas exemplos e podem ser ajustados
+            conforme necessário para se adequarem ao design do seu aplicativo.</p>
+
+
+    </section>
+
+
+    <section>
+        <a href="https://reactnative.dev/" target="_blank" rel="noopener noreferrer">Documentação
+            oficial do React</a>
+
+    </section>
+
+    <section>
+
+        <a href="https://expo.dev/">Acesse o Expo Dev para Desenvolvimento de App em React Native</a>
+
+    </section>
+
+    </section>
+
+    <section>
+        <p><b>Baixa no Smart Fone para Teste</b></p>
+        <img src="expogo.png">
+
+
+
+    </section>
+
+    <section>
+
+        <img src="c1.png">
+        <img src="c1.png">
+        <img src="c3.png">
+        <img src="c4.png">
+        <img src="c5.png">
+        <img src="c6.png">
+       
+                
+    </section>
+
+    <section>
+
+        <header>
+            <h1>Exercícios de conclusão e avaliação</h1>
+
+      
+        </header>
+        
+        <img src="e1.png">
+        <img src="e2.png">
+        <img src="e3.png">
+        <img src="e4.png">
+        <img src="e5.png">
+        <img src="e6.png">
+        <img src="e7.png">
+        <img src="e8.png">
+        <img src="e9.png">
+        <img src="e10.png">
+        <img src="e11.png">
+        <img src="e12.png">
+        <img src="e13.png">
+        <img src="e14.png">
+        <img src="e15.png">
+        <img src="e16.png">
+    
+        
+        
+        <section>
+
+            <img src="cb1.png">
+            <img src="cb2.png">
+            <img src="cb3.png">
+            <img src="cb4.png">
+            <img src="cb5.png">
+            <img src="cb6.png">
+            <img src="cb7.png">
+            <img src="cb8.png">
+            <img src="cb9.png">
+          
+
+        </section>
+
+              
+        <section>
+
+            <img src="eb1.png">
+           
+          
+
+        </section>
+        <p><code>import { StyleSheet } from 'react-native';</code>: Isso importa o módulo <code>StyleSheet</code> do pacote <code>react-native</code>, que é usado para criar e gerenciar estilos para os componentes do React Native.</p>
+        
+        <p><code>const estilos = StyleSheet.create({ ... });</code>: Isso define uma constante chamada <code>estilos</code> que contém os estilos para os seus componentes. A função <code>StyleSheet.create</code> é usada para criar um novo objeto de estilo.</p>
+        
+        <p><code>container: { ... },</code>: Isso define os estilos para a visualização "container". As propriedades especificadas aqui serão aplicadas ao componente de contêiner.</p>
+        
+        <ul>
+          <li><code>paddingTop: 30</code>: Adiciona 30 unidades de preenchimento na parte superior do contêiner.</li>
+          <li><code>paddingHorizontal: 20</code>: Adiciona 20 unidades de preenchimento horizontal (esquerda e direita) ao contêiner.</li>
+          <li><code>height: 90</code>: Define a altura do contêiner para 90 unidades.</li>
+          <li><code>justifyContent: "center"</code>: Centraliza verticalmente o conteúdo dentro do contêiner.</li>
+        </ul>
+        
+        <p><code>titulo: { ... },</code>: Isso define os estilos para o texto "titulo". As propriedades especificadas aqui serão aplicadas ao componente de texto.</p>
+        
+        <ul>
+          <li><code>fontSize: 18</code>: Define o tamanho da fonte para 18 unidades.</li>
+          <li><code>textTransform: 'uppercase'</code>: Transforma o texto em maiúsculas.</li>
+          <li><code>fontWeight: "bold"</code>: Define o peso da fonte como negrito.</li>
+          <li><code>color: '#fff'</code>: Define a cor do texto como branca (<code>#fff</code>).</li>
+        </ul>
+        
+        <p><code>export default estilos;</code>: Isso exporta o objeto <code>estilos</code>, para que ele possa ser importado e usado em outras partes do seu aplicativo React Native.</p>
+    
+      
+
+        <section>
+
+            <img src="ce1.png">
+            <img src="card2.png">
+            <img src="card3.png">
+            <img src="card4.png">
+            <img src="card5.png">
+            <img src="card6.png">
+            <img src="card7.png">
+            <img src="card8.png">
+            <img src="card9.png">
+            <img src="card10.png">
+            <img src="card11.png">
+            <img src="card12.png">
+            <img src="card13.png">
+            <img src="card14.png">
+            <img src="cardestilo.png">
+           
+           
+            
+            
+           
+          
+
+        </section>
+        
+        <section>
+
+            <img src="conteudo1.png">
+            <img src="conteudo2.png">
+            <img src="conteudo3.png">
+            <img src="conteudo4.png">
+            <img src="conteudo5.png">
+            <img src="conteudo6.png">
+            <img src="conteudo7.png">
+            <img src="conteudo8.png">
+            <img src="conteudo9.png">
+            <img src="conteudo10.png">
+            <img src="conteudo11.png">
+            <img src="conteudo12.png">
+            <img src="conteudo13.png">
+            <img src="conteudo14.png">
+            <img src="conteudo15.png">
+            <img src="conteudo16.png">
+            <img src="conteudoestilo.png">
+          
+            
+            
+            
+            
+            
+           
+            
+            
+           
+          
+
+        </section>
+        
+        <section>
+
+            <img src="app1.png">
+            <img src="app2.png">
+            <img src="app3.png">
+            <img src="app4.png">
+            <img src="app5.png">
+            <img src="app6.png">
+            <img src="app7.png">
+            <img src="app8.png">
+            <img src="app9.png">
+            <img src="app10.png">
+            <img src="app11.png">
+            <img src="app12.png">
+            <img src="app13.png">
+            <img src="app14.png">
+            <img src="app15.png">
+            <img src="app16.png">
+            <img src="appe1.png">
+            <img src="appe2.png">
+            <img src="appe3.png">
+            <img src="appe4.png">
+            <img src="appe5.png">
+            <img src="appe6.png">
+            <img src="appe7.png">
+            <img src="appe8.png">
+            <img src="appe9.png">
+          
+            
+            
+            
+            
+            
+            
+            
+            
+           
+            
+            
+           
+          
+
+        </section>
+        
+        
+      
+        
+        
+        
+        
+        
+
+        
+       
+    </section>
+
+</body>
+
+</html>
