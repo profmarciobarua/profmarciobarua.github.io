@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Código React Native</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .code-area {
+      margin: 20px;
+      padding: 20px;
+      background-color: #282c34;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .code-caption {
+      text-align: center;
+      font-style: italic;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    .pre_jsx {
+      white-space: pre;
+    }
+
+    .line-numbers {
+      counter-reset: line;
+    }
+
+    .line-numbers > code {
+      counter-increment: line;
+    }
+
+    .line-numbers > code::before {
+      content: counter(line);
+      display: inline-block;
+      width: 2em;
+      padding-right: 1em;
+      text-align: right;
+      color: #999;
+    }
+
+    .pre_jsx code {
+      color: #c5a5c5;
+      background-color: #2b303b;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .code-caption {
+      color: #999;
+    }
+
+    p b {
+      color: #c5a5c5;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Veja no <b>Código 1</b> um exemplo de código React Native que utiliza a linguagem JavaScript.</p>
+
+  <div class="code-area">
+    <div class="pre_jsx">
+      <div>
+        <pre style="white-space: pre;" class="line-numbers">
+          <code>
+import React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+
+export default function App() {
+  return (
+    &lt;View style={estilo.conteudo}&gt;
+      &lt;Text style={estilo.texto}&gt;
+        React Native utiliza a linguagem JavaScript.
+      &lt;/Text&gt;
+    &lt;/View&gt;
+  );
+}
+
+const estilo = StyleSheet.create({
+  conteudo: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    padding: 8,
+  },
+  texto: {
+    fontSize: 18,
+    textAlign: 'center',
+  },
+});
+            </code>
+        </pre>
+      </div>
+    </div>
+    <div class="code-caption"><b>Código 1</b>. Exemplo de código React Native</div>
+  </div>
+</body>
+
+</html>

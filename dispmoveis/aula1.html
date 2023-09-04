@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 1 - JavaScript, Node.js e React.js</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 800px;
+      line-height: 1.6;
+      color: #333;
+      text-align: justify;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+
+    ol {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Linguagem JavaScript</h1>
+    <p>È uma linguagem de programação para desenvolvimento web que traz interatividade às páginas, sendo executada no navegador e também no servidor. </p>
+  </header>
+
+  
+  <section>
+    <h2>Característica: Tipagem mutável </h2>
+    <p>Significa poder alterar o tipo da variável ao longo do código.</p>
+    <img src="tipomutavel.png" alt="Case Sensitive">
+  </section>
+
+
+  <section>
+    <h2>Característica: Case Sensitive</h2>
+    <p>Significa que letras maiúsculas e minúsculas são consideradas diferentes em uma linguagem de programação.</p>
+    <img src="sensitive.png" alt="Case Sensitive">
+  </section>
+
+  <section>
+    <h1>Node.js</h1>
+    <p>Node.js é um interpretador de código JavaScript que permite executar JavaScript no servidor.</p>
+
+    <h2>Instalando o Node.js</h2>
+    <p>Para começar a usar o Node.js, siga os passos abaixo:</p>
+    <ol>
+      <li>Visite o site oficial do Node.js: <a href="https://nodejs.org/en/" target="_blank">https://nodejs.org/en/</a>
+      </li>
+      <li>Clique no botão de download para a versão adequada ao seu sistema operacional.</li>
+      <li>Faça o download e execute o instalador, seguindo as instruções na tela.</li>
+      <li>Após a instalação, você poderá criar e executar aplicativos com Node.js.</li>
+    </ol>
+    <p>Agora você está pronto para começar a desenvolver usando o Node.js!</p>
+
+    <h3>Exemplo de console.log</h3>
+    <h4>Criar um arquivo aula1.js no VS Code</h4>
+
+    <p> Digitar o código console.log("Aula 1 - Dispositivos Móveis")</p>
+    <p> Depois Executar o Codigo <strong> node aula1.js </strong> </p>
+
+    <p>Crie um novo arquivo no Visual Studio Code clicando em <span class="lf-badge">File</span> > <span
+        class="lf-badge">New file</span> e salve-o na área de trabalho com o nome “<span
+        class="lf-badge">hello_world_funcao.js</span>”.</p>
+
+    <p>Vamos ao código.</p>
+
+    <h3>Criando uma variável</h3>
+
+    <p>O primeiro passo é criar uma variável com o valor “<span class="lf-badge">Hello World</span>”.</p>
+
+    <p>No JavaScript, para criar uma variável usamos a palavra <span class="lf-badge"><b>var</b></span>, seguida do
+      <span class="lf-badge">nome</span> da variável, depois um sinal de igual <span class="lf-badge">=</span>, para
+      indicar que vamos atribuir um valor para ela, e o <span class="lf-badge">valor</span>. Observe a <b>Figura 1</b>.
+    </p>
+
+    <div class="lf-secao">
+      <figure>
+        <img alt="Criação de uma variável"
+          src="//www.devmedia.com.br/arquivos/Salas/Linguagem/JavaScript/52/2332/40521/image1.png">
+        <figcaption><b>Figura 1</b>. Criação de uma variável</figcaption>
+      </figure>
+    </div>
+
+
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+var texto = "Hello World";
+</code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+
+
+    <h3>Criando uma função</h3>
+
+    <p>Em seguida, vamos criar uma função que imprime um texto. Utilizar funções evita repetições de código e o deixa
+      mais organizado.</p>
+
+    <p>Para criar uma função utilizamos a palavra <span class="lf-badge">function</span>, seguida do <span
+        class="lf-badge">nome</span> da função, parênteses <span class="lf-badge">( )</span> e chaves <span
+        class="lf-badge">{ }</span>. Veja como vai ficar:</p>
+
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    function imprimirTexto() { }
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+    <p>Precisamos enviar o texto que queremos imprimir para a função e, para isso, vamos passar um <span
+        class="lf-badge">parâmetro</span> para ela, que deve ser colocado entre os parênteses <span class="lf-badge">(
+        )</span>.</p>
+
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    function imprimirTexto(textoParaImprimir) {}
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+    <p>Agora precisamos criar o código que vai ser executado quando chamarmos esta função. Vamos colocar o mesmo código
+      da aula anterior dentro das <span class="lf-badge">{ }</span>:</p>
+
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    console.log(“Hello World”);
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+    <p>Mas no lugar do texto, vamos colocar o parâmetro que a função vai receber. Vai ficar assim:</p>
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    function imprimirTexto(textoParaImprimir) {
+       console.log(textoParaImprimir);
+    }
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+
+    <p>Veja no slide abaixo a explicação detalhada do código:
+
+    <div class="theme-default">
+      <div id="slide-comp" class="nivoSlider">
+        <img src="funcao1.png" alt="Slide 1" title="Slide 1 " />
+        <img src="funcao2.png" alt="Slide 2" title="Slide 2" />
+        <img src="funcao3.png" alt="Slide 3" title="Slide 3" />
+        <img src="funcao4.png" alt="Slide 4" title="Slide 4" />
+        <img src="funcao5.png" alt="Slide 5" title="Slide 5" />
+      </div>
+
+    </div>
+
+
+    <h3>Chamando a função</h3>
+
+    <p>Nossa função está pronta, agora só precisamos chamá-la no nosso código. Para isso, precisamos apenas digitar o
+      <span class="lf-badge">nome</span> dela, seguido do <span class="lf-badge">parâmetro</span> que vamos passar para
+      ela dentro dos parênteses. Vai ficar assim:
+    </p>
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    imprimirTexto(texto);
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+    <p>Nesse caso, estamos passando para a função <span class="lf-badge">imprimirTexto</span> a variável texto, que
+      possui o valor “<span class="lf-badge">Hello World</span>”.</p>
+
+
+    <div class="quote-container">
+      <label>
+        Utilizar funções evita repetições de código e o deixa mais organizado.
+      </label>
+    </div>
+
+    <p>Tudo pronto. Agora é só executar o comando <span class="lf-badge">node hello_world_funcao.js</span> no terminal,
+      como fizemos na aula anterior.</p>
+
+    <p>Segue o código completo:</p>
+    <div class="code-area">
+      <div class="pre_js">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    var texto = "Hello World";
+    
+    function imprimirTexto(textoParaImprimir) {
+       console.log(textoParaImprimir);
+    }
+    
+    imprimirTexto(texto);
+    
+    </code></pre>
+        </div>
+        <div class="code-caption"></div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+  <section>
+    <h1>React JS</h1>
+    <p>È uma biblioteca JavaScript de código aberto para construção de interfaces de usuário interativas e
+      reutilizáveis.</p>
+
+
+    <h3>Principais características</h3>
+
+    <p>As principais características do React JS são:</p>
+
+    <ol>
+      <li>Utiliza como base as linguagens HTML, CSS
+        e JavaScript</li>
+      <li>Utiliza o conceito de componentes para
+        criar as páginas</li>
+      <li>Cria Single Page Applications (SPAs)</li>
+    </ol>
+
+    <p>A seguir vemos que o React JS utiliza como base as
+      linguagens HTML, CSS e JavaScript para criar as páginas:</p>
+
+
+    <div class="theme-default">
+      <div id="slide-comp" class="nivoSlider">
+        <img src="react1.png" />
+        <img src="react2.png" />
+        <img src="react3.png" />
+        <img src="react4.png" />
+        <img src="react5.png" />
+        <img src="react5.png" />
+        <img src="react6.png" />
+        <img src="react7.png" />
+
+      </div>
+    </div>
+
+  </section>
+  <section>
+    <h3>Criando aplicação React JS</h3>
+
+    <p> Comando usado para criar app JS: <strong> npx create-react-app minha-pagina </strong> </p>
+
+    <img src="primeira.png" />
+
+    <p> Comando para startar o Projeto <strong> npm start </strong> </p>
+
+
+  </section>
+  <section>
+    <h3>Hello World</h3>
+
+    <p> Alterar o arquivo App.js dentro da pasta <strong> src <strong></strong> para criar o Hello World: </strong> </p>
+
+    <img src="codigo1.png" />
+
+
+    <h3>Entendo a Sintaxe</h3>
+
+    <img src="codigohello.png" />
+
+    <img src="codigohello1.png" />
+
+    <img src="codigohello2.png" />
+
+    <img src="codigohello3.png" />
+  </section>
+
+  <section>
+    <h3>Exercício Construindo Essa Pagina</h3>
+
+
+    <img src="exercicio.png" />
+
+    <img src="dicas.png" />
+
+    <p>Veja no <b>Código 2</b> o conteúdo do arquivo <span class="lf-badge">App.css</span>.</p>
+
+    <div class="code-area">
+      <div class="pre_css">
+        <div>
+          <pre style='white-space:pre;' class='line-numbers'><code>
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100vh;
+    }
+    
+    /* TOPO */
+    header {
+      background-color: #20232a;
+      color: #61dafb;
+      padding: 0 15px;
+    }
+    
+    header p {
+      font-weight: bold;
+    }
+    
+    /* CONTEÚDO */
+    main {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    /* SEÇÃO TÍTULO */
+    .box-titulo {
+      background-color: #282c34;
+      padding-bottom: 50px;
+    }
+    
+    h1 {
+      color: #61dafb;
+    }
+    
+    .box-titulo p{
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 50px;
+    }
+    
+    .box-titulo a{
+      text-decoration: none;
+      background-color: #61dafb;
+      color: #000;
+      padding: 10px 20px;
+    }
+    
+    /* SEÇÃO REQUISITOS */
+    .box-requisitos {
+      padding: 30px 10px;
+    }
+    
+    .box-cards {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 80px;
+    }
+    
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #282c34;
+      width: calc((100% / 3) - 10px);
+      max-width: 300px;
+      margin: 5px;
+      padding: 20px 15px;
+      border-radius: 5px;
+      box-shadow: 5px 5px rgb(145, 145, 145);
+    }
+    
+    .card h3{
+      margin: 0 0 10px;
+      color: #edc854;
+    } 
+    
+    .card p {
+      margin: 0;
+      color: #fff;
+    }
+    
+    /* SEÇÃO RODAPÉ */
+    footer {
+      background-color: #f2f3f6;
+      text-align: center;
+    }</code></pre>
+        </div>
+      </div>
+      <div class="code-caption"><b>Código 2</b>. Conteúdo do arquivo App.css</div>
+    </div>
+
+
+
+  </section>
+
+
+</body>
+
+</html>
