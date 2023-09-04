@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Introdução ao FrameWork Laravel</title>
+</head>
+
+<body>
+
+    <h1>Arquitetura de SoftWare</h1>
+    <p>Arquitetura de Software envolve a organização e comunicação das partes de um sistema</p>
+
+
+    <h1>O que é Laravel?</h1>
+    <p>Laravel é um framework de desenvolvimento web em PHP que segue o padrão de arquitetura MVC, o que significa que
+        ele separa as partes principais de um site - como a lógica de como as coisas funcionam, a aparência visual e o
+        armazenamento de informações - para que os desenvolvedores possam trabalhar de forma mais organizada. Ele também
+        possui recursos úteis, como o Eloquent ORM, que ajuda a lidar com informações do banco de dados de maneira mais
+        eficiente, e o sistema Blade de templates, que simplifica a criação da aparência das páginas.</p>
+
+
+    <h1>O que é MVC?</h1>
+    <p>MVC (Model-View-Controller) é um padrão de arquitetura de software amplamente utilizado no desenvolvimento de
+        aplicativos, especialmente em desenvolvimento web. Ele divide um aplicativo em três componentes principais:</p>
+
+    <h2>Model (Modelo):</h2>
+    <p>O Modelo é responsável por gerenciar os dados e a lógica de negócios do aplicativo. Ele representa o estado e a
+        estrutura dos dados, bem como as operações que podem ser executadas neles. O Modelo não sabe sobre a interface
+        do usuário ou como os dados são apresentados.</p>
+
+    <h2>View (Visualização):</h2>
+    <p>A Visualização é responsável por exibir os dados ao usuário. Ela representa a interface do usuário e a forma como
+        as informações são apresentadas. A Visualização não lida com a lógica de negócios ou manipulação de dados.</p>
+
+    <h2>Controller (Controlador):</h2>
+    <p>O Controlador atua como intermediário entre o Modelo e a Visualização. Ele recebe as interações do usuário na
+        interface do usuário, processa essas interações e atualiza o Modelo de acordo. Ele também pode ser responsável
+        por direcionar as ações apropriadas a serem executadas no Modelo ou na Visualização.</p>
+
+    <p>O padrão MVC tem como objetivo separar as preocupações e promover a modularidade do código. Isso facilita a
+        manutenção, a escalabilidade e a colaboração entre os desenvolvedores, pois cada componente tem uma função
+        claramente definida. O Modelo lida com os dados, a Visualização lida com a apresentação e o Controlador lida com
+        a lógica de coordenação.</p>
+
+    <p>O MVC é frequentemente usado em frameworks como Laravel (para PHP), Ruby on Rails (para Ruby), Django (para
+        Python) e muitos outros, mas também pode ser aplicado manualmente em qualquer projeto que busque uma organização
+        mais clara e eficiente do código.</p>
+
+
+
+    <h1>O que é Eloquent ORM?</h1>
+    <p>O Eloquent ORM é uma parte fundamental do framework de desenvolvimento web Laravel, escrito em PHP. ORM significa
+        "Object-Relational Mapping" (Mapeamento Objeto-Relacional), que é uma técnica que permite mapear objetos em
+        código para tabelas em um banco de dados relacional. O Eloquent ORM simplifica a interação com bancos de dados,
+        permitindo que os desenvolvedores realizem operações de banco de dados usando objetos e métodos em vez de
+        escrever consultas SQL diretamente.</p>
+
+    <p>Em termos simples, o Eloquent ORM ajuda a fazer a ponte entre o mundo de objetos da programação orientada a
+        objetos e o mundo de tabelas e registros de um banco de dados relacional. Ele permite que você defina modelos de
+        dados como classes em PHP, e esses modelos representam tabelas no banco de dados. Você pode realizar operações
+        de criação, leitura, atualização e exclusão (CRUD) usando métodos em seus modelos, em vez de escrever consultas
+        SQL manualmente.</p>
+
+
+
+    <p>No geral, o Eloquent ORM simplifica o acesso e manipulação de dados em bancos de dados relacionais, tornando o
+        desenvolvimento mais produtivo e permitindo que os desenvolvedores se concentrem mais na lógica do aplicativo do
+        que nas complexidades do SQL.</p>
+
+    <h1>O que é o sistema Blade de templates?</h1>
+    <p>O sistema Blade de templates é uma característica central do framework de desenvolvimento web Laravel, escrito em
+        PHP. Ele fornece uma maneira poderosa e eficiente de criar e gerenciar os templates das interfaces do usuário em
+        um aplicativo web.</p>
+
+    <p>Em essência, o Blade permite que os desenvolvedores escrevam código HTML de maneira mais limpa e estruturada,
+        incorporando recursos de programação em suas visualizações. Algumas das principais características do sistema
+        Blade incluem:</p>
+
+    <ol>
+        <li><strong>Sintaxe Simplificada:</strong> O Blade oferece uma sintaxe amigável para mesclar código PHP com
+            HTML. Isso facilita a exibição de dados dinâmicos e a execução de lógica dentro dos templates.</li>
+        <li><strong>Herança de Templates:</strong> O Blade permite a criação de layouts mestres e templates filho. Isso
+            é especialmente útil para manter uma consistência visual em todo o aplicativo, ao mesmo tempo que permite
+            personalizar seções específicas de cada página.</li>
+        <li><strong>Inclusão de Componentes:</strong> O Blade permite definir e incluir componentes reutilizáveis em
+            diferentes partes do aplicativo, melhorando a modularidade e a manutenção.</li>
+        <li><strong>Controle de Fluxo:</strong> Comandos como <code>@if</code>, <code>@foreach</code> e
+            <code>@switch</code> permitem a execução de diferentes fluxos de lógica condicional ou iteração diretamente
+            nos templates.</li>
+        <li><strong>Escapamento Automático:</strong> O Blade protege automaticamente contra ataques XSS (Cross-Site
+            Scripting) por meio do escapamento automático de saída.</li>
+        <li><strong>Diretivas Personalizadas:</strong> Você pode criar suas próprias diretivas Blade para incorporar
+            funcionalidades personalizadas nos templates.</li>
+    </ol>
+
+    <p>Em resumo, o sistema Blade de templates simplifica a criação e a manutenção de interfaces de usuário em
+        aplicativos Laravel, permitindo que os desenvolvedores criem visualizações dinâmicas e flexíveis sem comprometer
+        a clareza do código HTML. Ele é uma parte fundamental do Laravel que ajuda a melhorar a produtividade e a
+        qualidade do desenvolvimento de software.</p>
+
+        <a href="https://laravel.com/">Documentação Oficial Laravel</a>
+
+        <br>
+        <br>
+
+        <a href="exemploproduto">Exemplo Criação App Produto</a>
+
+
+
+
+
+
+</body>
+
+</html>

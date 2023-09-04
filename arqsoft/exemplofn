@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Requisito Não Funcional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        h2 {
+            margin-top: 20px;
+        }
+        
+        ul {
+            margin-left: 30px;
+            list-style-type: disc;
+        }
+        
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Requisito Não Funcional: Desempenho de Tempo de Carregamento</h1>
+    
+    <h2>Descrição:</h2>
+    <p>O sistema deve apresentar um desempenho de tempo de carregamento rápido para as páginas de produtos. O tempo de carregamento máximo permitido para cada página de produto é de 2 segundos.</p>
+    
+    <h2>Critérios de Aceitação:</h2>
+    <ul>
+        <li>O tempo de carregamento das páginas de produtos deve ser mensurado utilizando ferramentas de análise de desempenho.</li>
+        <li>As páginas de produtos devem ser carregadas em um tempo médio de 2 segundos ou menos.</li>
+        <li>Em situações excepcionais, como picos de tráfego, o tempo de carregamento não deve exceder 3 segundos.</li>
+    </ul>
+    
+    <h2>Justificativa:</h2>
+    <p>Um rápido tempo de carregamento das páginas de produtos melhora a experiência do usuário, reduzindo a frustração e aumentando a probabilidade de conversões.</p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Criação de Sistema de Cadastro de Produtos em Laravel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        ul {
+            padding-left: 40px;
+        }
+        code {
+            background-color: #f2f2f2;
+            padding: 2px 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Criação de Sistema de Cadastro de Produtos em Laravel</h1>
+        <ol>
+            <li><strong>Passo 1: Configuração Inicial</strong>
+                <ul>
+                    <li>Instale o Laravel em sua máquina:</li>
+                    <code>composer global require laravel/installer</code>
+                    <li>Crie um novo projeto Laravel:</li>
+                    <code>laravel new CadastroProdutos</code>
+                    <li>Navegue para o diretório do projeto:</li>
+                    <code>cd CadastroProdutos</code>
+                </ul>
+            </li>
+            <li><strong>Passo 2: Criação do Modelo e Migração</strong>
+                <ul>
+                    <li>Crie o modelo e a migração para a entidade "Produto":</li>
+                    <code>php artisan make:model Produto -m</code>
+                    <li>Edite o arquivo de migração gerado em <code>database/migrations/</code> para definir os campos do produto.</li>
+                    <li>Execute as migrações para criar as tabelas no banco de dados:</li>
+                    <code>php artisan migrate</code>
+                </ul>
+            </li>
+        
+
+            <li><strong>Passo 3: Criação do Controlador</strong>
+                <ul>
+                    <li>Crie um controlador para lidar com as ações do CRUD:</li>
+                    <code>php artisan make:controller ProdutoController</code>
+                    <li>Abra o controlador gerado em <code>app/Http/Controllers/ProdutoController.php</code> e implemente as funções para cada ação CRUD.</li>
+                </ul>
+            </li>
+            <li><strong>Passo 4: Rotas</strong>
+                <ul>
+                    <li>Defina as rotas em <code>routes/web.php</code> para mapear as URLs para as ações no controlador.</li>
+                </ul>
+            </li>
+            <li><strong>Passo 5: Visualizações</strong>
+                <ul>
+                    <li>Crie as visualizações em <code>resources/views/</code> para exibir os formulários e listagens de produtos.</li>
+                </ul>
+            </li>
+            <li><strong>Passo 6: Testando o Sistema</strong>
+                <ul>
+                    <li>Inicie o servidor de desenvolvimento:</li>
+                    <code>php artisan serve</code>
+                    <li>Acesse o sistema pelo navegador e teste as funcionalidades de cadastro, listagem, edição e exclusão de produtos.</li>
+                </ul>
+            </li>
+        </ol>
+        <p>Lembrando que este é um tutorial básico para um sistema de cadastro de produtos. Consulte a <a href="https://laravel.com/docs">documentação oficial do Laravel</a> para mais detalhes.</p>
+    </div>
+</body>
+</html>

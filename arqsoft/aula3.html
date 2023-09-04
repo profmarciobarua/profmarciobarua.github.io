@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Introdução ao FrameWork Laravel</title>
+</head>
+
+<body>
+
+    <h1>Arquitetura de SoftWare</h1>
+    <p>Arquitetura de Software envolve a organização e comunicação das partes de um sistema</p>
+
+
+    <h1>O que é Laravel?</h1>
+    <p>Laravel é um framework de desenvolvimento web em PHP que segue o padrão de arquitetura MVC, o que significa que
+        ele separa as partes principais de um site - como a lógica de como as coisas funcionam, a aparência visual e o
+        armazenamento de informações - para que os desenvolvedores possam trabalhar de forma mais organizada. Ele também
+        possui recursos úteis, como o Eloquent ORM, que ajuda a lidar com informações do banco de dados de maneira mais
+        eficiente, e o sistema Blade de templates, que simplifica a criação da aparência das páginas.</p>
+
+
+    <h1>O que é MVC?</h1>
+    <p>MVC (Model-View-Controller) é um padrão de arquitetura de software amplamente utilizado no desenvolvimento de
+        aplicativos, especialmente em desenvolvimento web. Ele divide um aplicativo em três componentes principais:</p>
+
+    <h2>Model (Modelo):</h2>
+    <p>O Modelo é responsável por gerenciar os dados e a lógica de negócios do aplicativo. Ele representa o estado e a
+        estrutura dos dados, bem como as operações que podem ser executadas neles. O Modelo não sabe sobre a interface
+        do usuário ou como os dados são apresentados.</p>
+
+    <h2>View (Visualização):</h2>
+    <p>A Visualização é responsável por exibir os dados ao usuário. Ela representa a interface do usuário e a forma como
+        as informações são apresentadas. A Visualização não lida com a lógica de negócios ou manipulação de dados.</p>
+
+    <h2>Controller (Controlador):</h2>
+    <p>O Controlador atua como intermediário entre o Modelo e a Visualização. Ele recebe as interações do usuário na
+        interface do usuário, processa essas interações e atualiza o Modelo de acordo. Ele também pode ser responsável
+        por direcionar as ações apropriadas a serem executadas no Modelo ou na Visualização.</p>
+
+    <p>O padrão MVC tem como objetivo separar as preocupações e promover a modularidade do código. Isso facilita a
+        manutenção, a escalabilidade e a colaboração entre os desenvolvedores, pois cada componente tem uma função
+        claramente definida. O Modelo lida com os dados, a Visualização lida com a apresentação e o Controlador lida com
+        a lógica de coordenação.</p>
+
+    <p>O MVC é frequentemente usado em frameworks como Laravel (para PHP), Ruby on Rails (para Ruby), Django (para
+        Python) e muitos outros, mas também pode ser aplicado manualmente em qualquer projeto que busque uma organização
+        mais clara e eficiente do código.</p>
+
+    <h2 class="wp-block-heading">Passo 1 &#8211; Criar o projeto</h2>
+
+
+
+    <p>Para esse exemplo, vou criar um novo projeto. Se você já possui um projeto e quer adicionar o login, recomendo
+        fazer uma cópia ou, caso esteja usando o Git, criar uma branch para testar esse recurso.</p>
+
+
+
+    <pre class="wp-block-code"><code lang="" class="">#criar um projeto usando o Laravel Installer
+        laravel new autenticacao
+        
+        #criar um projeto usando o composer
+        composer create-project laravel/laravel autenticacao</code></pre>
+
+
+
+    <h2 class="wp-block-heading">Passo 2 &#8211; Criar e configurar o banco de dados</h2>
+
+
+
+    <p>Abra o gerenciador do MySQL ou Postgres e crie um banco de dados com o nome que achar adequado. Neste exemplo
+        estou usando o mesmo nome do projeto: <strong><em>autenticacao</em></strong>.</p>
+
+
+
+    <p>Abra o arquivo <strong>.env</strong> e ajuste as configurações do banco de dados, segundo o SGBD que de sua
+        preferência:</p>
+
+    <pre title="arquivo .env - MySQL" class="wp-block-code"><code class="">DB_CONNECTION=mysql
+            DB_HOST=127.0.0.1
+            DB_PORT=3306
+            DB_DATABASE=breeze_project
+            DB_USERNAME=root
+            DB_PASSWORD=password</code></pre>
+
+
+
+    <pre title="arquivo .env - PostgreSQL" class="wp-block-code"><code class="">DB_CONNECTION=pgsql
+            DB_HOST=127.0.0.1
+            DB_PORT=5432
+            DB_DATABASE=breeze_project
+            DB_USERNAME=postgres
+            DB_PASSWORD=password</code></pre>
+
+
+
+    <p>Agora vamos executar as migrations que já vem predefinidas para criar o <em>schema </em>do Banco de Dados. Note
+        que o comando deve ser executando estando dentro da pasta do projeto. </p>
+
+
+
+    <pre class="wp-block-code"><code class=""> php artisan migrate</code></pre>
+
+
+
+    <h2 class="wp-block-heading">Passo 3 &#8211; Instalar o Laravel Breeze</h2>
+
+
+
+    <p>Agora vamos instalar o pacote Breeze, ou seja, baixar as dependências necessárias, usando o seguinte comando:</p>
+
+
+
+    <pre class="wp-block-code"><code class="">composer require laravel/breeze --dev</code></pre>
+
+
+
+    <p>Apesar das dependências estarem instaladas, a estrutura da autenticação, ou seja, <em>views</em>, <em>controllers
+        </em>e outros elementos ainda não foram criados. Para isso, digite o seguinte comando:</p>
+
+
+
+    <pre class="wp-block-code"><code class="">php artisan breeze:install </code></pre>
+
+
+
+    <p>O próximo passo é executar os comandos para baixar as dependências JS que, no caso do Breeze, usa o <a
+            href="https://tailwindcss.com/" target="_blank" rel="noopener" title="">TailwindCSS </a>para estilizar as
+        páginas. Vejamos:</p>
+
+
+
+    <pre class="wp-block-code"><code lang="powershell" class="language-powershell">#baixa as dependências JS
+            npm install
+            
+            #gera os arquivos CSS e JS otimizados
+            npm run dev
+            </code></pre>
+
+
+
+    <p>O comando <strong><em>npm run dev</em></strong> irá iniciar um servidor NPM. Basta fechá-lo. </p>
+
+
+
+    <p>Agora precisamos executar o servidor para verificar se realmente deu certo. Execute o seguinte comando:</p>
+
+
+
+    <pre class="wp-block-code"><code class="">php artisan serve</code></pre>
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Definição de Rotas do Laravel</title>
+    </head>
+
+    <body>
+        <h1>Definição de Rotas do Laravel</h1>
+
+        <h2>Rota Raiz ('/')</h2>
+        <p>Quando alguém acessa a página inicial do seu site, a função anônima definida será executada, retornando uma
+            visualização chamada 'welcome'. Isso é geralmente a página inicial padrão gerada pelo Laravel.</p>
+
+        <h2>Rota do Painel ('/dashboard')</h2>
+        <p>A função anônima definida será executada quando alguém acessar a URL '/dashboard'. Ela retornará uma
+            visualização chamada 'dashboard'. No entanto, essa rota tem um middleware que verifica se o usuário está
+            autenticado e verificado antes de permitir o acesso à visualização.</p>
+
+        <h2>Rotas Agrupadas por Middleware de Autenticação</h2>
+        <p>As próximas rotas são agrupadas sob o middleware 'auth'. Isso significa que todas essas rotas requerem que o
+            usuário esteja autenticado para acessá-las. Dentro desse grupo, você tem rotas relacionadas à edição,
+            atualização e exclusão do perfil do usuário. Elas apontam para métodos do <code>ProfileController</code>.
+        </p>
+
+        <h2>Inclusão das Rotas de Autenticação Geradas pelo Laravel</h2>
+        <p>A última linha, <code>require __DIR__.'/auth.php';</code>, inclui um conjunto de rotas de autenticação
+            geradas automaticamente pelo Laravel. Essas rotas estão no arquivo <code>auth.php</code> no mesmo diretório
+            onde esse arquivo de rotas está localizado. Elas lidam com as funcionalidades padrão de autenticação, como
+            login, registro, recuperação de senha etc.</p>
+    </body>
+
+    </html>
+
+
+
+    <a href="https://laravel.com/">Documentação Oficial Laravel</a>
+
+    <br>
+    <br>
+
+    <a href="exemploproduto">Exemplo Criação App Produto</a>
+
+
+
+
+
+
+</body>
+
+</html>

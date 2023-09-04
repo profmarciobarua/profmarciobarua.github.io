@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Popular Tabela "Produtos" no Laravel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f2f2f2;
+            padding: 2px 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Popular Tabela "Produtos" no Laravel</h1>
+        <p>Para popular a tabela "produtos" no Laravel, você pode usar os recursos de <strong>seeding</strong> que o framework oferece.</p>
+        <p><strong>Passo 1: Criar um Seeder</strong></p>
+        <ol>
+            <li>Crie um seeder para a tabela de produtos usando o comando:</li>
+            <code>php artisan make:seeder ProdutosTableSeeder</code>
+            <li>Isso criará um arquivo chamado <code>ProdutosTableSeeder.php</code> na pasta <code>database/seeders</code>.</li>
+            <li>Abra esse arquivo e defina os registros fictícios que você deseja inserir na tabela.</li>
+        </ol>
+        <!-- ... (continua) ... -->
+    </div>
+</body>
+</html>
