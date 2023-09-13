@@ -1,0 +1,28 @@
+/* Centraliza o conteúdo no meio da página e cria margem superior de 100px */
+.container {
+    /* Alinha o conteúdo ao centro horizontalmente */
+    text-align: center;
+    /* Define a margem superior em 100px e margens laterais automáticas para centralizar */
+    margin: 100px auto;
+  }
+  
+  /* Define espaçamento interno e margem para campos de entrada e botão */
+  input, button {
+    /* Define o espaçamento interno de 5px na vertical e 10px na horizontal */
+    padding: 5px 10px;
+    /* Define margens iguais de 5px em todas as direções */
+    margin: 5px;
+  }
+  
+  /* Define o cursor do mouse como "pointer" para o botão */
+  button {
+    /* Muda o cursor do mouse para um ponteiro (mãozinha) */
+    cursor: pointer;
+  }
+  
+  /* Define a fonte em negrito para o resultado */
+  p {
+    /* Torna o texto em negrito */
+    font-weight: bold;
+  }
+  
